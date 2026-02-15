@@ -1,38 +1,118 @@
-1.Create Student Data Table
-Enter student details in Excel with columns like:
-Student ID, Name, Department, Mark1–Mark5, Attendance.
-This is the raw data.
-2️. Calculate Total Marks
-Add all 5 subject marks to know each student’s total performance.
-Formula:
-=SUM(D2:H2)
-3️. Find Average Marks
-To know the overall performance level of each student.
-Formula:
-=AVERAGE(D2:H2)
-4️. Decide Result (Pass/Fail)
-Use a condition to check if the student passed.
-Example: If total marks ≥ 60 → Pass, else Fail.
-Formula:
-=IF(J2>=60,"Pass","Fail")
-5️. Attendance Analysis
-Attendance column shows student discipline and eligibility.
-Formula:
-IF(I2<75%,"Not Eligible","Eligible")
-6️. Summary Sheet Creation
-In a new sheet, calculate:
-Number of students → =COUNTA(A2:A31)
-Number of Pass → =COUNTIF(L2:L31,"Pass")
-Number of Fail → =COUNTIF(L2:L31,"Fail")
-Average Attendance → =AVERAGE(I2:I31)
-Top Scorer Name → Use INDEX,MATCH,MAX
-7️. Use Pivot Table (Final Analysis)
-Pivot table helps to:
-sum of total students
-Count Pass/Fail
-Average marks by attendance
-top scorer name
- Outcome:
-This process helps to store, calculate, analyze, and summarize student academic performance easily.
+Project Overview:
+This project demonstrates fundamental SQL concepts using an Employee and Department management system.
 
+The database contains two main tables:
+
+Department
+
+Employees
+
+The project shows how relational databases work by connecting employees with their respective departments and performing various queries to retrieve meaningful information.
+
+Step 1: Database Creation
+First, a new database is created and selected for use.
+This ensures that all tables and data belong to a specific workspace.
+
+Step 2: Department Table Creation
+A table named Department is created to store department details.
+
+It contains:
+
+Department ID
+
+Department Name
+
+Department Location
+
+Each department is uniquely identified using a department ID.
+
+Multiple departments such as IT, HR, Sales, Finance, and Marketing are added with different locations.
+
+ Step 3: Employees Table Creation
+A table named Employees is created to store employee details.
+
+It contains:
+
+Employee ID
+
+Employee Name
+
+Age
+
+Salary
+
+Department ID
+
+The Department ID connects each employee to a department.
+This creates a relationship between the two tables.
+
+Step 4: Establishing Relationship Between Tables
+The Employees table is linked to the Department table using the Department ID.
+
+This relationship allows us to:
+
+Identify which employee belongs to which department
+
+Combine data from both tables
+
+Maintain structured relational data
+
+This is the core concept of a relational database.
+
+Step 5: Displaying Data
+All department records and employee records are displayed to verify that data has been inserted correctly.
+
+This step ensures the database is working as expected.
+
+Step 6: Joining Tables (INNER JOIN Concept)
+The project demonstrates how to combine Employees and Department tables.
+
+By matching the Department ID in both tables, we can:
+
+Display employee name
+
+Display salary
+
+Display department name
+
+This is called an INNER JOIN, which returns only matching records from both tables.
+
+ Step 7: Filtering Data
+The project includes conditional filtering to:
+
+Retrieve employees working in a specific department (e.g., IT)
+
+Retrieve employees earning more than a certain salary
+
+This demonstrates the use of conditional logic in SQL queries.
+
+Step 8: Aggregate Functions
+The project calculates:
+
+Total salary per department
+
+Average salary per department
+
+This is done using grouping techniques.
+It helps in analyzing salary distribution within each department.
+
+ Step 9: Subquery Usage
+A subquery is used to:
+
+Calculate the overall average salary
+
+Retrieve employees earning more than the average salary
+
+This demonstrates nested query logic in SQL.
+
+ Step 10: Salary Classification Using CASE
+Employees are categorized based on their salary into:
+
+High Performer
+
+Medium Performer
+
+Low Performer
+
+This shows how conditional expressions can be used to create new derived columns in the output.
 
